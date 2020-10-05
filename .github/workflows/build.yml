@@ -1,0 +1,22 @@
+name: Jekyll site CI
+
+on:
+  push:
+    branches: [ deploy ]
+  pull_request:
+    branches: [ deploy ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: npm install and npm run build
+      run: |
+        npm ci
+        npm run build:ci
