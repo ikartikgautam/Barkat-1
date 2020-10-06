@@ -1,12 +1,29 @@
-<div class="main ">
-    <div style="margin-left:auto;display:flex;">
+<div class="main">
+    <div style="flex: 1;"></div>
+    <div style="display:flex;">
         <span [ngClass]="{'nav-links':!homeHeader,'nav-links-anime':homeHeader}" routerLink="/">Home</span>
-        <span [ngClass]="{'nav-links':!homeHeader,'nav-links-anime':homeHeader}" routerLink="/aboutus">About Us</span>
+        <span [ngClass]="{'nav-links':!homeHeader,'nav-links-anime':homeHeader}"
+            routerLink="/objective">Objectives</span>
         <span [ngClass]="{'nav-links':!homeHeader,'nav-links-anime':homeHeader}" routerLink="/campaign">Campaigns</span>
-        <span [ngClass]="{'nav-links':!homeHeader,'nav-links-anime':homeHeader}">Employement</span>
-        <span [ngClass]="{'nav-links':!homeHeader,'nav-links-anime':homeHeader}" routerLink="/contactus">Contact Us</span>
-        <div [ngClass]="{'sign-up':!homeHeader,'sign-up-anime':homeHeader}">Sign up</div>
+        <span [ngClass]="{'nav-links':!homeHeader,'nav-links-anime':homeHeader}" routerLink="/founder">Founders</span>
+        <span [ngClass]="{'nav-links':!homeHeader,'nav-links-anime':homeHeader}" routerLink="/gallery">Gallery</span>
+        <span [ngClass]="{'nav-links':!homeHeader,'nav-links-anime':homeHeader}" routerLink="/media">Media</span>
+        <div [ngClass]="{'sign-up':!homeHeader,'sign-up-anime':homeHeader}" routerLink="/contactus"
+            class="pc-flex-display">
+            Contact Us</div>
+
+        <div class="mb-display" [ngClass]="{'mb-container-padding':homeHeader}">
+            <button mat-fab aria-label="menu"
+                [ngClass]="{'mb-action-color-static':!homeHeader,'mb-action-color-Anim':homeHeader}"
+                (click)="openMbMenu()" style="z-index: 20;transition: 0.3s;" id="button">
+                <mat-icon>{{navIcon}}</mat-icon>
+            </button>
+        </div>
+
     </div>
 </div>
-
 <!-- [ngClass]="{'homeHeader'?'sign-up':'sign-up-anime'}"  -->
+
+<div class="mb-menu" id="menu" style="z-index: -1;">
+
+</div>

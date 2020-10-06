@@ -1,88 +1,72 @@
-<app-header style="background-color: black;"></app-header>
-<div style="min-height: 100vh; display: flex; flex-direction: column;">
+<!-- <div class="container-fluid main">
+    <app-header *ngIf="homeHeader"></app-header>
+    <div class="container">
+        <span style="font-size:3rem;font-weight:700">Contact us</span>
+        <span style="font-size:2rem;font-weight:600;margin-top:8%">" A life lived for others is a life well
+            lived"</span>
+    </div>
+</div> -->
+<div class="container-fluid">
+<app-header *ngIf="homeHeader"></app-header>
+</div>
 
-    <div style="flex: 1;"></div>
+<!-- <div class="container">
+    <div class="row" style="height:30vh;text-align: center;display:flex;align-items: center;">
+        <span style="font-size:2.2rem;color:rgb(52,73,94);font-weight: 600;">Whether you're interested in enrolling or
+            just have a question, call us at 999999999 or send us a message below</span>
+    </div>
+</div> -->
 
-    <!-- <div style="width: 50%; margin: 24px auto;">
+<div style="min-height: 100vh;background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+background-blend-mode: multiply,multiply;">
 
-        <h1 style="text-align: center;">Contact Us</h1>
+    <div style="width:100%;display:flex;align-items: center;justify-content: center;">
+        <span style="font-size:2rem;color:white;font-weight:600;margin-top:3%">Send us a message</span>
+    </div>
+    <div id="wrap">
 
-        <form [formGroup]="contact" (ngSubmit)="submit()">
+        <br><br>
 
-            <mat-form-field class="form-field">
-                <mat-label>Name</mat-label>
-                <input matInput type="text" formControlName="name">
-            </mat-form-field>
+        <div id="form-wrap" (click)="open()">
 
-            <mat-form-field class="form-field">
-                <mat-label>Email</mat-label>
-                <input matInput type="text" formControlName="email">
-            </mat-form-field>
+            <div class="form">
 
-            <mat-form-field class="form-field">
-                <mat-label>Contact Number</mat-label>
-                <input matInput type="text" formControlName="contact">
-            </mat-form-field>
+                <form [formGroup]="contact" (ngSubmit)="submit()" id="form">
 
-            <mat-form-field class="form-field">
-                <mat-label>Subject</mat-label>
-                <input matInput type="text" formControlName="subject">
-            </mat-form-field>
+                    <mat-form-field class="form-field">
+                        <mat-label>Name</mat-label>
+                        <input matInput type="text" formControlName="name">
+                    </mat-form-field>
 
-            <mat-form-field class="form-field">
-                <mat-label>Message</mat-label>
-                <textarea matInput rows="5" placeholder="Enter your message here" formControlName="message"></textarea>
-            </mat-form-field>
+                    <mat-form-field class="form-field">
+                        <mat-label>Email</mat-label>
+                        <input matInput type="text" formControlName="email">
+                    </mat-form-field>
 
-            <button mat-raised-button color="primary" type="submit">Primary</button>
+                    <mat-form-field class="form-field">
+                        <mat-label>Contact Number</mat-label>
+                        <input matInput type="text" formControlName="contact">
+                    </mat-form-field>
 
-        </form>
+                    <mat-form-field class="form-field">
+                        <mat-label>Subject</mat-label>
+                        <input matInput type="text" formControlName="subject">
+                    </mat-form-field>
 
-    </div> -->
+                    <mat-form-field class="form-field">
+                        <mat-label>Message</mat-label>
+                        <textarea matInput rows="5" placeholder="How can we help?"
+                            formControlName="message"></textarea>
+                    </mat-form-field>
 
-    <div class="wrapper">
+                    <button mat-raised-button color="primary" type="submit" >Submit</button>
 
-        <div class="mail" (click)="open()">
-            <div class="cover">
-                <div class="letter">
-            
-                    <form [formGroup]="contact" (ngSubmit)="submit()">
-            
-                        <mat-form-field class="form-field">
-                            <mat-label>Name</mat-label>
-                            <input matInput type="text" formControlName="name">
-                        </mat-form-field>
-            
-                        <mat-form-field class="form-field">
-                            <mat-label>Email</mat-label>
-                            <input matInput type="text" formControlName="email">
-                        </mat-form-field>
-            
-                        <mat-form-field class="form-field">
-                            <mat-label>Contact Number</mat-label>
-                            <input matInput type="text" formControlName="contact">
-                        </mat-form-field>
-            
-                        <mat-form-field class="form-field">
-                            <mat-label>Subject</mat-label>
-                            <input matInput type="text" formControlName="subject">
-                        </mat-form-field>
-            
-                        <mat-form-field class="form-field">
-                            <mat-label>Message</mat-label>
-                            <textarea matInput rows="5" placeholder="Enter your message here" formControlName="message"></textarea>
-                        </mat-form-field>
-            
-                        <button mat-raised-button color="primary" type="submit">Primary</button>
-            
-                    </form>
+                </form>
 
-                </div>
             </div>
+
         </div>
 
     </div>
-
-    <div style="flex: 1;"></div>
 
 </div>

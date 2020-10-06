@@ -27,6 +27,9 @@ $barkat-theme: mat-light-theme($barkat-primary, $barkat-accent, $barkat-warn);
 
 /* You can add global styles to this file, and also import other style files */
 
+@import "~ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
+@import "~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
+
 html,
 body {
     height: 100%;
@@ -36,7 +39,7 @@ body {
     font-family: "Nanum Gothic", sans-serif;
 }
 
-*{
+* {
     outline: none;
 }
 
@@ -47,4 +50,37 @@ body {
     letter-spacing: normal;
     font-family: "Nanum Gothic", sans-serif !important;
     font: unset !important;
+}
+
+.imageViewer .mat-dialog-container {
+    padding: 6px;
+    width: 60vw;
+}
+
+*{
+    outline: none!important;
+}
+
+/* ======== RESPONSIVE ========= */
+.mb-display {
+    display: none !important;
+}
+.pc-display {
+    display: block !important;
+}
+.pc-flex-display {
+    display: flex !important;
+}
+@media only screen and (max-width: 600px) {
+    .mb-container-padding{
+        padding-right: 15px!important;
+        padding-left: 15px!important;
+    }
+    .mb-display {
+        display: block !important;
+    }
+    .pc-flex-display,
+    .pc-display {
+        display: none !important;
+    }
 }

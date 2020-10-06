@@ -1,43 +1,69 @@
-.main{
-    height:90vh;
-    background: 
-    /* top, transparent red, faked with gradient */ 
-    linear-gradient(
-      rgba(49, 49, 49, 0.8), 
-      rgba(49, 49 ,49, 0.45)
+.main {
+  height: 90vh;
+  background: 
+    /* top, transparent red, faked with gradient */ linear-gradient(
+      rgba(49, 49, 49, 0.8),
+      rgba(49, 49, 49, 0.45)
     ),
-  
-    /* bottom, image */
-    url("../../assets/plants3.webp");
-    // background-image: url("../../assets/plants.png");
-    background-size: cover;
-    background-position:center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    /* bottom, image */ url("../../assets/plants3.webp");
+  // background-image: url("../../assets/plants.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-.main >div{
-    margin-top:5%;
-    display:flex;
-    flex-direction: column;
-    text-align: center;
-    color:white;
+.main-text {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
 }
 
-.description > div{
-  margin:5%;
-  display:flex;
-  flex-direction:column;
+.main-text> span:nth-child(1){
+  margin-top:5%;
+  font-size:calc(2.5rem + 1vw);
+  font-weight:700
+}
+
+.main-text>span:nth-child(2){
+  font-size:calc(1.5rem + 1vw);
+  font-weight:600;
+  margin-top:5%
+}
+
+.description > div {
+  margin: 7% 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.description >div >span:nth-child(1){
+  color:rgb(52,73,94);
+  font-size:calc(1.2rem + 0.5vw)
+}
+
+.description >div >span:nth-child(2){
+  color:rgb(83, 83, 83);
+  font-size:calc(1rem + 0.5vw);
+  margin-top:3%
+}
+
+.objective-text{
+  font-size:calc(2rem + 1vw);
+  padding-bottom:10%;
+  margin:auto;
 }
 
 $black: #1d1f20;
 $blue: #83e4e2;
-$green: #ee4540;
-$yellow: #c72c41;
+$green: #a2ed56;
+$yellow: #fddc32;
 $white: #fafafa;
 
 %boxshadow {
-  box-shadow: 0.25rem 0.25rem 0.6rem rgba(0,0,0,0.05), 0 0.5rem 1.125rem rgba(75,0,0,0.05);
+  box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.05), 0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
 }
 
 ol.gradient-list {
@@ -56,16 +82,15 @@ ol.gradient-list {
     position: relative;
     &::before,
     &::after {
-      background: linear-gradient(135deg, $blue 0%,$green 100%);
+      background: linear-gradient(135deg, $blue 0%, $green 100%);
       border-radius: 1rem 1rem 0 1rem;
-      content: '';
+      content: "";
       height: 3rem;
       left: -1rem;
       overflow: hidden;
       position: absolute;
       top: -1rem;
       width: 3rem;
-
     }
     &::before {
       align-items: flex-end;
@@ -73,42 +98,114 @@ ol.gradient-list {
       content: counter(gradient-counter);
       color: $black;
       display: flex;
-      font: 900 1.5em/1 'Montserrat';
+      font: 900 1.5em/1 "Montserrat";
       justify-content: flex-end;
       padding: 0.125em 0.25em;
       z-index: 1;
     }
     @for $i from 1 through 5 {
-      &:nth-child(10n+#{$i}):before {
-        background: linear-gradient(135deg, rgba($green, $i * 0.2) 0%,rgba($yellow, $i * 0.2) 100%);
+      &:nth-child(10n + #{$i}):before {
+        background: linear-gradient(135deg, rgba($green, $i * 0.2) 0%, rgba($yellow, $i * 0.2) 100%);
       }
     }
     @for $i from 6 through 10 {
-      &:nth-child(10n+#{$i}):before {
-        background: linear-gradient(135deg, rgba($green, 1 - (($i - 5) * 0.2)) 0%,rgba($yellow, 1 - (($i - 5) * 0.2)) 100%);
+      &:nth-child(10n + #{$i}):before {
+        background: linear-gradient(
+          135deg,
+          rgba($green, 1 - (($i - 5) * 0.2)) 0%,
+          rgba($yellow, 1 - (($i - 5) * 0.2)) 100%
+        );
       }
     }
     + li {
       margin-top: 2rem;
     }
-    >span{
-      color:rgb(94, 93, 93);
-      margin-left:5%;
-      position:relative;
+    > span {
+      color: rgb(94, 93, 93);
+      margin-left: 5%;
+      position: relative;
     }
-    >span:nth-child(1){
-      margin-left:0;
-      color:black;
+    > span:nth-child(1) {
+      margin-left: 0;
+      color: black;
     }
 
-    >span::before{
-      content:'-';
+    > span::before {
+      content: "-";
       position: absolute;
-      left:-1.1rem;
+      left: -1.1rem;
     }
 
-    >span:nth-child(1)::before{
-      content:'';
+    > span:nth-child(1)::before {
+      content: "";
     }
   }
+}
+
+
+
+.help-btn-area{
+  margin-top:2%;
+  height:30vh;
+  background-color: rgb(245,245,245);
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.help-btn{
+  border:2px solid rgb(238, 69, 64);
+  color:rgb(238, 69, 64);
+  padding:13px 35px;
+  font-size:1.3rem;
+  border-radius: 30px;
+  cursor:pointer;
+}
+
+.help-btn:hover{
+  color:white;
+  background-color:rgb(238, 69, 64);
+  box-shadow:1px 1px 3px 1px rgb(156, 155, 155);
+}
+
+.call-area{
+  margin-top:2%;
+  height:30vh;
+  background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;    
+}
+
+.enrollment-btn{
+  margin-top:2%;
+  background-color:#510a32;
+  color:white;
+  padding:13px 30px;
+  font-size:1.3rem;
+  border-radius:30px;
+  cursor:pointer;
+}
+
+.enrollment-btn:hover{
+  background-color: #3d0726;
+}
+
+
+
+@media all and (max-width:768px){
+
+  .main-text>span:nth-child(1){
+    margin-top:45%;
+  }
+
+  .main-text>span:nth-child(2){
+    margin-top:15%;
+  }
+
+  .description >div >span:nth-child(2){
+    margin-top:10%;
+  }
+
 }

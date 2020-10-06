@@ -10,6 +10,7 @@
     height: 48px;
     transition: 0.3s;
     display: flex;
+    cursor:pointer;
 }
 .box span {
     color: white;
@@ -22,6 +23,7 @@
     color: white;
     line-height: 48px;
     font-size: 22px;
+    text-decoration: none;
 }
 
 .fb {
@@ -34,11 +36,15 @@
 .link {
     background-color: #0077b5;
 }
+.insta{
+    background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf)}
 .mail{
     background-color: #7d7d7d;
     border-bottom-right-radius: 8px;
 }
 
 .expandBox {
-    width: 100px !important;
+    width: 80px !important;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }

@@ -1,12 +1,10 @@
-<div class="main">
+<div class="container-fluid main">
     <app-header *ngIf="homeHeader"></app-header>
-    <div class="container" style="display:flex;flex-direction:column;text-align: center;margin-top:5% ">
-        <span style="font-size: 3rem;color:white">Barkat</span>
-        <span style="font-size: 3rem;color:white">Improving the quality of live for youth with</span>
-        <span style="font-size: 3rem;color:white">cognitive challanges and extraordinary behavioural</span>
-        <span style="font-size: 3rem;color:white">needs </span>
+    <div class="container main-text" style="display:flex;flex-direction:column;text-align: center;margin-top:5% ">
+        <span  style="font-size: calc(1rem + 3vw);color:white">Barkat</span>
+        <span style="color:white;text-align:center;">Improving the quality of live for youth with cognitive challanges and extraordinary behavioural needs</span>
         <div class="tour"
-            style="display:flex;margin:5% auto 0 auto;font-size:1.5rem;color:white;justify-content: center;border:none;border-radius:30px;box-shadow:1px 2px 1px 1px rgb(65, 65, 65);cursor:pointer">
+            style="display:flex;margin:5% auto 0 auto;font-size: calc(0.7rem + 1vw);color:white;justify-content: center;border:none;border-radius:30px;box-shadow:1px 2px 1px 1px rgb(65, 65, 65);cursor:pointer">
             <span
                 style="padding:10px 25px;background-color:#c72c41;border-top-left-radius: 30px;border-bottom-left-radius: 30px;">
                 How we help</span>
@@ -17,37 +15,33 @@
     </div>
 </div>
 
-<!-- ---------------------------------------------Atomic-elements--------------------------------------------------------------- -->
+<!-- ---------------------------------------------Associates--------------------------------------------------------------- -->
 
-<div class="container-fluid" style="background-image:linear-gradient(to right,rgb(245,245,245), rgb(229,239,245))">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 atomic-col" style="background-color: rgb(247,247,247);">
-                <img src="../../assets/icon-atom.svg" alt="" style="max-width:35%;margin-bottom:5%">
-                <span style="font-size:1.7rem;font-weight: 700;margin-top:5%;margin-bottom:3%;color:rgb(52,73,94)">All
-                    Ages</span>
-                <span style="margin-top:3%;color:rgb(63,83,103)">Serving children and yound adults</span>
-            </div>
-            <div class="col-md-4 atomic-col" style="background-color: rgb(237,242,245);">
-                <img src="../../assets/icon-atom.svg" alt="" style="max-width:35%;margin-bottom:5%">
-                <span style="font-size:1.7rem;font-weight: 700;margin-top:5%;margin-bottom:3%;color:rgb(52,73,94)">All
-                    Ages</span>
-                <span style="margin-top:3%;color:rgb(63,83,103)">Serving children and yound adults</span>
-            </div>
-            <div class="col-md-4 atomic-col" style="    background-color: rgb(227,237,243);">
-                <img src="../../assets/icon-atom.svg" alt="" style="max-width:35%;margin-bottom:5%">
-                <span style="font-size:1.7rem;font-weight: 700;margin-top:5%;margin-bottom:3%;color:rgb(52,73,94)">All
-                    Ages</span>
-                <span style="margin-top:3%;color:rgb(63,83,103)">Serving children and yound adults</span>
-            </div>
-        </div>
+<div class="container-fluid">
+<div class="row" style="margin-top:10%;">
+    <div class="col-md-12" style="display:flex;justify-content: center;">
+            <span class="associates" >Our Associates</span>
     </div>
+    <div class="col-md-12">
+<!-- OWL Crousel -->
+<div style="margin-top: 5vh;margin-bottom: 5vh;">
+    <owl-carousel-o [options]="customOptions">
+            <ng-template carouselSlide *ngFor="let e of images">
+                    <div [ngStyle]="{'background-image':e.image}" class="img-container" (click)="openImage(e.image)">
+                            <!-- <p [ngStyle]="{'color':e.color}">
+                                    {{e.title}}</p> -->
+                    </div>
+            </ng-template>
+    </owl-carousel-o>
+</div>
+</div>
+</div>
 </div>
 
 <div class="container">
-    <div class="row" style="height:90vh;display:flex;justify-content: space-around;align-items: center;">
+    <div class="row videoo">
         <div class="col-md-6">
-            <video id="my-video" class="video-js" controls preload="auto" max width="400" max height="300"
+            <video id="my-video" class="video-js" controls preload="auto"  width="90%"  height="365"
                 poster="../../assets/tree.jpeg" data-setup="{}">
                 <source src="../../assets/yo.mp4" type="video/mp4" />
                 <source src="MY_VIDEO.webm" type="video/webm" />
@@ -57,6 +51,7 @@
                     <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
                 </p>
             </video>
+            
         </div>
         <div class="col-md-6" style="display:flex;flex-direction:column;justify-content: space-evenly;">
             <span style="color: rgb(52,73,94);font-size:2.5rem;font-weight:600">We're here to help</span>
@@ -68,7 +63,7 @@
                 printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
                 the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
             </span>
-            <span class="watch-btn">Watch Video</span>
+            <!-- <span class="watch-btn"  (click)="play()">Watch Video</span> -->
         </div>
     </div>
 </div>
@@ -91,25 +86,21 @@
 </div>
 <div class="orange-zone container-fluid">
     <div class="container" style="height:100%">
-        <div class="row" style="height:100%">
-            <div class="col-md-6 offers" style="box-shadow:4px 0 16px 0 rgba(221, 80, 75, 0.9);">
-                <span style="color:white;font-size:3rem;font-weight:700;margin-top:20%;margin-bottom:5%">Barkat</span>
-                <span style="color:white;font-size:2.3rem;font-weight:600;margin:5% 0;">Our Services</span>
-                <span
-                    style="color:white;font-size:1.5rem;font-family: 'Abel', sans-serif;text-align: center;margin:3% 0">Lorem
-                    Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s.</span>
-                <span class="service-btn">Services</span>
-            </div>
-            <div class="col-md-6 offers" style="box-shadow:1px 0 16px 0 rgba(221, 80, 75, 0.9)">
-                <span style="color:white;font-size:3rem;font-weight:700;margin-top:20%;margin-bottom:5%">Barkat</span>
-                <span style="color:white;font-size:2.3rem;font-weight:600;margin:5% 0;">Programs we offer</span>
-                <span
-                    style="color:white;font-size:1.5rem;font-family: 'Abel', sans-serif;text-align: center;margin:3% 0;">Lorem
-                    Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s.</span>
-                <span class="program-btn">Programs</span>
-            </div>
+        <div class="row" style="height:100%" >
+            <div class="col-md-12" style="display:flex;justify-content: center;margin-top:5%">
+                <span style="font-size:3rem;font-weight: 600;color:white;">Our Aim</span>
+        </div>
+            <div  class="col-md-12 orange-content">
+                <span >Our work aims to break the vicious
+                        cycle of poverty and social isolation and to restore hope for a better future.
+                        We believe that every person has the right to access resources and opportunities
+                        in order to live and develop with dignity and to become an active and
+                        contributing member of our society. </span>
+                <span >We also believe that
+                        we should provide our environment in return of what we take, so we are aiming to
+                        plant 10,000 plants in one month in our current drive and will be contributing
+                        to the environment ahead in future in whatever way we can.</span>
+        </div>
         </div>
     </div>
 </div>
@@ -117,84 +108,56 @@
 
 
 <div class="container p-cards">
-    <div class="cardy">
-        <div class="cardy-main">
-            <div class="cardy-front">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let e of mentorImages;let i = index">
+    <div class=" cardy" style="margin:10% auto">
+        <div class="cardy-main" id="{{i}}">
+            <div  class="cardy-front">
                 <div class="cardy-header">
-                    <img src="../../assets/rsk.jpg" alt="">
-                    <h2>person</h2>
+                    <div [ngStyle]="{'background-image':e.image}"></div>
+                    <h2>{{e.name}}</h2>
+                    <h3>( {{e.position}} )</h3>
                 </div>
                 <div class="wave-container">
                     <div class="wave"></div>
                     <div class="wave"></div>
                     <div class="wave"></div>
                 </div>
-                <div class="iconss">
-                    <a href="" class="link"><i class="fab fa-facebook-f"></i></a>
-                    <a href="" class="link"><i class="fab fa-instagram"></i></a>
-                    <a href="" class="link"><i class="fab fa-twitter"></i></a>
-                    <a href="" class="link"><i class="fab fa-linkedin"></i></a>
+                <div class="iconss" *ngIf="i<3">
+                    <a href="" target="_blank" class="link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="" target="_blank" class="link"><i class="fab fa-instagram"></i></a>
                 </div>
-                <div class="more">
-                    <span (click)="rotate()">MORE</span>
+                <div class="iconss" *ngIf="i>2">
+                    <a href="{{e.fb}}" target="_blank" class="link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="{{e.insta}}" target="_blank" class="link"><i class="fab fa-instagram"></i></a>
+                    <a href="{{e.twit}}" target="_blank" class="link"><i class="fab fa-twitter"></i></a>
+                    <a href="{{e.link}}" target="_blank" class="link"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <div *ngIf="i>2" class="more">
+                    <span (click)="rotate(i)">THOUGHT</span>
                 </div>
             </div>
-            <div class="cardy-back">
-
+            <div *ngIf="i>2" class="cardy-back" style="position:relative">
+                <div style="position:absolute;left:20px;top:60px;text-align: center;">
+                    <span class="founder-quote">Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                        industry's standard dummy text ever since the 1500s.</span>
+                </div>
                 <div class="more">
-                    <span (click)="rotate()">BACK</span>
+                    <span (click)="rotate(i)">BACK</span>
                 </div>
 
             </div>
         </div>
     </div>
-    <div class="cardy">
-        <div class="cardy-header">
-            <img src="../../assets/rsk.jpg" alt="">
-            <h2>person</h2>
-        </div>
-        <div class="wave-container">
-            <div class="wave"></div>
-            <div class="wave"></div>
-            <div class="wave"></div>
-        </div>
-        <div class="iconss">
-            <a href="" class="link"><i class="fab fa-facebook-f"></i></a>
-            <a href="" class="link"><i class="fab fa-instagram"></i></a>
-            <a href="" class="link"><i class="fab fa-twitter"></i></a>
-            <a href="" class="link"><i class="fab fa-linkedin"></i></a>
-        </div>
-        <div class="more">
-            <a href="">MORE</a>
-        </div>
-    </div>
-    <div class="cardy">
-        <div class="cardy-header">
-            <img src="../../assets/rsk.jpg" alt="">
-            <h2>person</h2>
-        </div>
-        <div class="wave-container">
-            <div class="wave"></div>
-            <div class="wave"></div>
-            <div class="wave"></div>
-        </div>
-        <div class="iconss">
-            <a href="" class="link"><i class="fab fa-facebook-f"></i></a>
-            <a href="" class="link"><i class="fab fa-instagram"></i></a>
-            <a href="" class="link"><i class="fab fa-twitter"></i></a>
-            <a href="" class="link"><i class="fab fa-linkedin"></i></a>
-        </div>
-        <div class="more">
-            <a href="">MORE</a>
-        </div>
-    </div>
+</div>
+    
+</div>
 </div>
 
 <div class="container-fluid help-btn-area">
-    <span class="help-btn">How we help</span>
+    <span class="help-btn" routerLink="/objective">Objectives</span>
 </div>
 
 <div class="container-fluid call-area">
-    <span style="color:white;font-size:1.8rem;font-weight:600">Give us a call +91 9988776655</span>
-    <span class="enrollment-btn">Interested in Enrollment?</span>
+    <span class="enrollment-btn" routerLink="/contactus">Interested in Enrollment?</span>
 </div>

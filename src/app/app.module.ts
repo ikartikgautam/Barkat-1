@@ -25,6 +25,12 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { CampaignComponent } from './campaign/campaign.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { ImageViewerComponent } from './image-viewer/image-viewer.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { FounderComponent } from './founder/founder.component';
+import { MediaCuttingsComponent } from './media-cuttings/media-cuttings.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +46,11 @@ import { CampaignComponent } from './campaign/campaign.component';
     AdminDashboardComponent,
     AdminDashNavComponent,
     AboutUsComponent,
-    CampaignComponent
+    CampaignComponent,
+    GalleryComponent,
+    ImageViewerComponent,
+    FounderComponent,
+    MediaCuttingsComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,8 +64,11 @@ import { CampaignComponent } from './campaign/campaign.component';
     MatButtonModule,
     MatToolbarModule,
     MatMenuModule,
-    MatIconModule
+    MatIconModule,
+    CarouselModule,
+    MatDialogModule,
   ],
+  entryComponents: [ImageViewerComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

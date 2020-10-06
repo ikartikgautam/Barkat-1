@@ -1,68 +1,162 @@
-.form-field {
-    width: 100%;
+.main{
+    height:90vh;
+    background: 
+    /* top, transparent red, faked with gradient */ 
+    linear-gradient(
+      rgba(49, 49, 49, 0.8), 
+      rgba(49, 49 ,49, 0.45)
+    ),
+  
+    /* bottom, image */
+    url("../../assets/plants3.webp");
+    // background-image: url("../../assets/plants.png");
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-.wrapper {
-    margin: auto;
-    width: fit-content;
+.main >div{
+    margin-top:5%;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    color:white;
+}
+
+.form-field {
+    width: 100%;
 }
 
 $mailBox: rosybrown;
 $mailBoxFlapR: rgb(255, 66, 66);
 $mailBoxFlapL: rgb(255, 123, 123);
 
-.mail {
-    width: 300px;
-    height: 200px;
-    background-color: $mailBox;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+#wrap {
+    width: 530px;
+    margin: 20px auto 0;
+    height: 700px;
+}
+
+#form-wrap {
+    overflow: hidden;
+    height: 447px;
     position: relative;
-    transform-style: preserve-3d;
-    cursor: pointer;
+    top: 0px;
+    transition: all 1s ease-in-out 0.3s;
 }
 
-.mail::before {
+#form-wrap::before {
     content: "";
     position: absolute;
-    top: 0;
-    right: 0;
-    border-left: 150px solid transparent;
-    border-right: 150px solid $mailBoxFlapR;
-    border-top: 100px solid transparent;
-    border-bottom: 100px solid $mailBoxFlapL;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    z-index: 5;
+    bottom: 128px;
+    left: 0px;
+    background-image: url(../../assets/before.png);
+    width: 530px;
+    height: 317px;
 }
 
-.mail::after {
+#form-wrap::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    border-right: 150px solid transparent;
-    border-left: 150px solid $mailBoxFlapL;
-    border-top: 100px solid transparent;
-    border-bottom: 100px solid $mailBoxFlapL;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    z-index: 4;
+    bottom: 0px;
+    left: 0px;
+    background-image: url(../../assets/after.png);
+    width: 530px;
+    height: 259px;
 }
 
-// .cover {
+#form-wrap.hide::after,
+#form-wrap.hide::before {
+    display: none;
+}
+
+// #form-wrap:hover{
+//     height: 900px;
+//     top: -200px;
 // }
-.letter {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: whitesmoke;
-    top: 0;
-    transition: 1s;
-    border-radius: 10px;
-    border: 1px solid #b1b1b1;
+
+.form-wrap-anim {
+    height: 900px !important;
+    top: -200px !important;
 }
 
-.letterOpen {
-    top: -110% !important;
+form {
+    background-color: white;
+    position: relative;
+    top: 200px;
+    overflow: hidden;
+    height: 200px;
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #cecece;
+    border-right: 3px;
+    transition: all 1s ease-in-out 0.3s;
+    box-shadow: 2px 2px 11px #80808075;
+    border-radius: 5px;
+
+    background-image: url(../../assets/letter_bg.png);
+}
+
+.form-anim {
+    height: 530px !important;
+}
+
+// #form-wrap:hover form{
+// height: 530px;
+// }
+
+
+
+@media all and (max-width:768px){
+
+    #wrap {
+        width: 400px;
+        height: 600px;
+    }
+
+    #form-wrap::before {
+        content: "";
+        position: absolute;
+        bottom: 90px;
+        left: 0px;
+        background-image: url(../../assets/before.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 400px;
+        height: 317px;
+    }
+    
+    #form-wrap::after {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        background-image: url(../../assets/after.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 400px;
+        height: 259px;
+    }
+
+    form {
+        background-color: white;
+        position: relative;
+        top: 200px;
+        overflow: hidden;
+        height: 200px;
+        width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #cecece;
+        border-right: 3px;
+        transition: all 1s ease-in-out 0.3s;
+        box-shadow: 2px 2px 11px #80808075;
+        border-radius: 5px;
+    
+        background-image: url(../../assets/letter_bg.png);
+    }
 }

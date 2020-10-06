@@ -16,14 +16,24 @@
     background-attachment: fixed;
 }
 
-.atomic-col{
-    display:flex;
-    flex-direction:column;
-    align-items: center;
-    justify-content: center;
-    padding-top:7%;
-    padding-bottom:7%;
+.main-text>span:nth-child(2){
+    position:relative;
+    font-size: calc(1rem + 2vw)
 }
+
+.associates{
+    font-size:calc(2rem + 2vw);
+    font-weight: 600;
+    color:rgb(52,73,94);
+}
+
+.videoo{
+    min-height:75vh;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .watch-btn{
     margin-top:2%;  
     border:1px solid rgb(58,155,220);
@@ -67,7 +77,7 @@
 }
 
 .orange-zone{
-    height:85vh;
+    min-height:70vh;
     width:100%;
     background: 
     /* top, transparent red, faked with gradient */ 
@@ -81,6 +91,25 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.orange-content{
+    margin-top:3%;
+    display:flex;
+    flex-direction:column;
+    line-height: 2rem;
+}
+
+.orange-content>span:nth-child(1){
+    margin-top:2%;
+    color:white;
+    font-size:calc(1.1rem + 0.3vw);
+}
+
+.orange-content>span:nth-child(2){
+    margin:3% 0;
+    color:white;
+    font-size:calc(1.1rem + 0.3vw);
 }
 
 .home-profiles{
@@ -118,7 +147,7 @@
 
 .call-area{
     margin-top:2%;
-    height:40vh;
+    height:30vh;
     background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
     display:flex;
     flex-direction:column;
@@ -180,11 +209,7 @@
 
 .p-cards{
     min-height: 100vh;
-    display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-    grid-gap:20px;
-    place-items:center;
-    overflow-x: hidden;
+    padding:3% 0
 }
 
 .cardy{
@@ -241,22 +266,33 @@
     z-index:1;
 }
 
-.cardy-header > img{
+.cardy-header > div{
+    background-size: cover;
+    background-position: top;
     position: absolute;
-    width:100px;
-    height:100px;
+    width:130px;
+    height:130px;
     object-fit:cover;
-    top:50px;
+    top:20px;
     left:50%;
     transform: translateX(-50%);
     border-radius: 50%;
+    z-index:100
 }
 
 .cardy-header > h2{
     color:white;
-    margin-top:160px;
+    margin-top:150px;
     text-align: center;
     font-size:18px;
+
+}
+
+.cardy-header > h3{
+    color:white;
+    margin-top:-20px;
+    text-align: center;
+    font-size:13px;
 
 }
 
@@ -298,6 +334,7 @@
     bottom:30px;
     left:50%;
     transform: translateX(-50%);
+    cursor:pointer
 }
 
 .more > a{
@@ -344,7 +381,7 @@
     left:-200px;
     top:-112%;
     background: linear-gradient(#353535,#383737);
-    animation: wave 3s infinite linear;
+    animation: wave 6s infinite linear;
 }
 
 @keyframes wave{
@@ -363,3 +400,63 @@
 .wave:nth-child(3){
     animation-delay:0.3s;
 }
+
+.founder-quote{
+    position:relative;
+    font-size:1.3rem;
+    text-align: center;
+}
+
+.founder-quote::before{
+    content:'"';
+    position:absolute;
+    top:-10px;
+    left:-15px;
+    font-size:2rem
+}
+
+.founder-quote::after{
+    content:'"';
+    position:absolute;
+    bottom:-10px;
+    right:-15px;
+    font-size:2rem
+}
+
+.img-container {
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center
+  }
+  .img-container p {
+    width: 100%;
+    backdrop-filter: brightness(0.1);
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    font-size: 24px;
+  }
+
+  @media all and (max-width:768px){
+      .main-text>span:nth-child(1){
+          margin-top:50%;
+          
+      }
+      .main-text>span:nth-child(2){
+        line-height: 2rem;
+      }
+
+      .videoo{
+          display:flex;
+          flex-direction: column-reverse;
+      }
+
+      .videoo >div >video{
+          margin:10% 0;
+      }
+
+      .orange-content>span:nth-child(2){
+        margin:10% 0;
+    }
+  }

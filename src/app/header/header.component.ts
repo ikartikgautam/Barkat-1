@@ -26,4 +26,22 @@ export class HeaderComponent implements OnInit {
     }
   }
 
+  navIcon = 'menu'
+
+  openMbMenu() {
+    var menu = document.getElementById("menu")
+    menu.classList.toggle("open-menu");
+    document.getElementById("button").classList.toggle("rotateBtn")
+    // document.getElementById("button").style.transform = 'rotate(45deg)'
+    if (menu.classList.contains('open-menu')) {
+      this.navIcon = 'close';
+      document.body.style.overflow = 'hidden'
+    }
+    else {
+      document.body.style.overflow = 'unset'
+      this.navIcon = 'menu';
+    }
+
+  }
+
 }

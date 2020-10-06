@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 
+
 @Component({
   selector: 'app-about-us',
   templateUrl: './about-us.component.html',
@@ -10,6 +11,7 @@ export class AboutUsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    window.scrollTo(0,0);
   }
 
   homeHeader = true;
@@ -23,4 +25,5 @@ export class AboutUsComponent implements OnInit {
     }
   }
 
+  
 }

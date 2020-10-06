@@ -1,0 +1,82 @@
+.bg-patch {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 35%;
+    height: 80vh;
+    background: rgb(144, 172, 211);
+    z-index: -1;
+}
+.bg-patch img {
+    height: 90vh;
+    position: absolute;
+    z-index: -1;
+    right: 40%;
+    top: 8%;
+}
+
+.kohli-bar {
+    width: 80%;
+    background-color: whitesmoke;
+    margin: auto;
+    height: 10vh;
+    border-radius: 50px;
+    box-shadow: 0px 0px 20px 3px #80808094;
+    margin-top: -8%;
+}
+
+.kohli-bar-flex {
+    margin-left: 24px;
+    margin-right: 24px;
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.kohli-bar-flex div {
+    height: 100%;
+    line-height: 10vh;
+    white-space: nowrap;
+    font-weight: bold;
+    transition: 0.3s;
+    color: grey;
+}
+
+#visitBtn {
+    width: fit-content;
+    margin: auto;
+    display: block;
+    background-color: red;
+    color: white;
+    padding: 14px 24px 14px 24px;
+    border-radius: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.kohli-bar-flex :hover {
+    color: black;
+    font-size: 20px;
+}
+
+.aboutFounder {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: justify;
+}
+
+.aboutFounder span {
+    flex: 1;
+}
+
+.aboutFounder img{
+    margin: auto;
+    display: block;
+}
+
+.aboutFounder h1 {
+    font-weight: bold;
+    font-size: 30px;
+}

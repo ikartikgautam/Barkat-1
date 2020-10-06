@@ -1,39 +1,173 @@
 <div class="container-fluid main">
     <app-header *ngIf="homeHeader"></app-header>
     <div class="container">
-            <span style="font-size:3rem;font-weight:700">Campaigns</span>
-            <span style="font-size:2rem;font-weight:600;margin-top:8%">" A life lived for others is a life well lived"</span>
+        <div class="main-text">
+        <span >Campaigns</span>
+        <span >" A life lived for others is a life well
+            lived"</span>
     </div>
-    </div>
-    
-    <div class="container description">
-        <div class="row">
-        <span style="color:rgb(52,73,94);font-size:1.5rem">Currently we are working on the MEGA PLANTATION DRIVE in which we aim to plant 10, 000 plants in one month. With this we can conserve the environment keeping in consideration of the social distancing norms and still can help the nature to heal. Also, we're doing SUNDAY DRIVES in which we feeds animals, workship the GOD and do tasks that motivates an individual to achieve something great in his/her lives.</span>
 </div>
 </div>
 
-<div class="container">
-    <div class="row" style="padding-bottom:5%">
-        <div class="col-md-4" style="margin-top:5%" >
-            <div style="height:40vh;width:100%;box-shadow:5px 10px 10px 0px rgba(0,0,0,0.2);border-radius: 10px;border-top: 7px solid rgb(17, 173, 194);">
-                
+<div class="container description">
+    <div class="row">
+        <span >Currently we are working on the MEGA PLANTATION DRIVE in
+            which we aim to plant 10, 000 plants in one month. With this we can conserve the environment keeping in
+            consideration of the social distancing norms and still can help the nature to heal. Also, we're doing SUNDAY
+            DRIVES in which we feeds animals, workship the GOD and do tasks that motivates an individual to achieve
+            something great in his/her lives.</span>
+    </div>
+</div>
+
+<!-- ========================================== -->
+<div class="container" style="width:100%">
+    <owl-carousel-o [options]="customOptions" style="width:100%">
+
+        <ng-template carouselSlide style="margin:auto">
+            <div
+                style="height:70vh;width:90%;background-image:linear-gradient(to bottom,rgb(231,140,104),rgb(217,21,110));border-radius: 10px;   box-shadow:0px 5px 10px 0px rgba(0,0,0,0.2);display:flex;flex-direction:column;align-items: center;padding:10px">
+                <img style="height:30%;flex:2" src="../../assets/graduated.svg" alt="">
+                <span style="color:white;font-size: 1.6rem;font-weight: 600;flex:1;margin-top:5%">Educational Aid</span>
+                <span style="color:white;text-align: center;font-family: 'Indie Flower', cursive;flex:3;line-height: 1.5rem;">Barkat has
+                    constantly endeavored to deliver basic education to that stratum of the society which has been
+                    obscure in the eyes of general public. Education occupies a gigantic layer at the base of our vision
+                    of an ideally prosperous society. We aspire to make resourceful assets that are a lot less
+                    vulnerable to poverty and unemployment.</span>
             </div>
+        </ng-template>
+        <ng-template carouselSlide>
+            <div
+                style="height:70vh;width:90%;background-image:linear-gradient(to bottom,rgb(231,53,131),rgb(30,14,86));border-radius: 10px;   box-shadow:0px 5px 10px 0px rgba(0,0,0,0.2);display:flex;flex-direction:column;align-items: center;padding:10px">
+                <img style="height:30%;flex:2" src="../../assets/health-check.svg" alt="">
+                <span style="color:white;font-size: 1.6rem;font-weight: 600;flex:1;;margin-top:5%">Medical Aid</span>
+                <span style="color:white;text-align: center;font-family: 'Indie Flower', cursive;flex:3;line-height: 1.5rem;">Medical
+                    treatments often cost a huge amount of money which is unaffordable to the underprivileged sections.
+                    Barkat has made numerous efforts at the grass root level to bride in this gap to develop a less
+                    elusive and more approachable healthcare system for everyone.</span> </div>
+        </ng-template>
+        <ng-template carouselSlide>
+            <div
+                style="height:70vh;width:90%;background-image:linear-gradient(to bottom,rgb(10, 175, 10),rgb(17, 61, 17));border-radius: 10px;   box-shadow:0px 5px 10px 0px rgba(0,0,0,0.2);display:flex;flex-direction:column;align-items: center;padding:10px">
+                <img style="height:30%;flex:2" src="../../assets/plant.svg" alt="">
+                <span style="color:white;font-size: 1.6rem;font-weight: 600;flex:1;margin-top:5%">Plantation
+                    Drives</span>
+                <span style="color:white;text-align: center;font-family: 'Indie Flower', cursive;flex:3;line-height: 1.4rem;">In lieu with
+                    the Sustainable Development Goals of UNDP; we have taken it upon ourselves to make a greener and
+                    healthy ecosystem around us. Even amidst a pandemic, we made plantation drives a possibility by
+                    coordinating with volunteers all over India to plant 10,000 saplings and seeds. Restoration and
+                    creation of a sustainable abode to undo human negligence is one of the central ideas of
+                    Barkat.</span> </div>
+        </ng-template>
+        <ng-template carouselSlide>
+            <div
+                style="height:70vh;width:90%;background-image:linear-gradient(to bottom,rgb(231,140,104),rgb(217,21,110));border-radius: 10px;   box-shadow:0px 5px 10px 0px rgba(0,0,0,0.2);display:flex;flex-direction:column;align-items: center;padding:10px">
+                <img style="height:30%;flex:2" src="../../assets/distributed.svg" alt="">
+                <span style="color:white;font-size: 1.6rem;font-weight: 600;flex:1;margin-top:5%">Mass Distributions</span>
+                <span style="color:white;text-align: center;font-family: 'Indie Flower', cursive;flex:3;line-height: 1.5rem;">Barkat has believed in sharing the privilege that god almighty has bestowed upon us with those who seek help. Basic objects of sustenance like groceries, clothes and blankets are distributed regularly to always uphold this belief that everyone deserves two square meals and protection from extremities.</span>
+            </div>
+        </ng-template>
+        <ng-template carouselSlide>
+            <div
+                style="height:70vh;width:90%;background-image:linear-gradient(to bottom,rgb(231,53,131),rgb(30,14,86));border-radius: 10px;   box-shadow:0px 5px 10px 0px rgba(0,0,0,0.2);display:flex;flex-direction:column;align-items: center;padding:10px">
+                <img style="height:30%;flex:2" src="../../assets/wind.svg" alt="">
+                <span style="color:white;font-size: 1.6rem;font-weight: 600;flex:1;margin-top:5%;text-align: center;">Help during natural disasters</span>
+                <span style="color:white;text-align: center;font-family: 'Indie Flower', cursive;flex:3;line-height: 1.5rem;">As disasters, earthquakes and floods become a regular ordeal; Barkat makes sure that we can reduce and absorb the impact of the same by mobilizing available resources and directing them towards the worst affected area of the disaster.  Impromptu action and immediate relief becomes our main focus in times of desperate trouble.   </span>
+            </div>
+        </ng-template>
+        <ng-template carouselSlide>
+            <div
+                style="height:70vh;width:90%;background-image:linear-gradient(to bottom,rgb(10, 175, 10),rgb(17, 61, 17));border-radius: 10px;   box-shadow:0px 5px 10px 0px rgba(0,0,0,0.2);display:flex;flex-direction:column;align-items: center;padding:10px">
+                <img style="height:30%;flex:2" src="../../assets/work.svg" alt="">
+                <span style="color:white;font-size: 1.6rem;font-weight: 600;flex:1;margin-top:5%">Educational seminars</span>
+                <span style="color:white;text-align: center;font-family: 'Indie Flower', cursive;flex:3;line-height: 1.5rem;">Youth has been the driving force of Barkat. Training and preparing students for future is an avenue where we have expanded gracefully over the years. Organizing educational and training seminars for the students of various institutions in order to prepare them for future is another aspect of our goals.</span>
+            </div>
+        </ng-template>
 
+
+    </owl-carousel-o>
+</div>
+<!-- ========================================== -->
+
+<!-- <div class="container">
+    <div class="row" style="min-height:100vh">
+        <div class="col-md-4 col-xs-12" style="margin-top:3%">
+            <div
+                style="height:70vh;width:90%;background-image:linear-gradient(to bottom,rgb(231,140,104),rgb(217,21,110));border-radius: 10px;   box-shadow:0px 5px 10px 0px rgba(0,0,0,0.2);display:flex;flex-direction:column;align-items: center;padding:10px">
+                <img style="height:30%;flex:2" src="../../assets/graduated.svg" alt="">
+                <span style="color:white;font-size: 1.6rem;font-weight: 600;flex:1;margin-top:5%">Educational Aid</span>
+                <span style="color:white;text-align: center;font-family: 'Indie Flower', cursive;flex:3">Barkat has
+                    constantly endeavored to deliver basic education to that stratum of the society which has been
+                    obscure in the eyes of general public. Education occupies a gigantic layer at the base of our vision
+                    of an ideally prosperous society. We aspire to make resourceful assets that are a lot less
+                    vulnerable to poverty and unemployment.</span>
+            </div>
         </div>
-        <div class="col-md-4" style="margin-top:5%">
-            <div style="height:40vh;width:100%;box-shadow:5px 10px 10px 0px rgba(0,0,0,0.2);border-radius: 10px;border-top: 7px solid rgb(238, 6, 6);"></div>
+        <div class="col-md-4 col-xs-12" style="margin-top:3%">
+            <div
+                style="height:70vh;width:90%;background-image:linear-gradient(to bottom,rgb(231,53,131),rgb(30,14,86));border-radius: 10px;   box-shadow:0px 5px 10px 0px rgba(0,0,0,0.2);display:flex;flex-direction:column;align-items: center;padding:10px">
+                <img style="height:30%;flex:2" src="../../assets/health-check.svg" alt="">
+                <span style="color:white;font-size: 1.6rem;font-weight: 600;flex:1;;margin-top:5%">Medical Aid</span>
+                <span style="color:white;text-align: center;font-family: 'Indie Flower', cursive;flex:3">Medical
+                    treatments often cost a huge amount of money which is unaffordable to the underprivileged sections.
+                    Barkat has made numerous efforts at the grass root level to bride in this gap to develop a less
+                    elusive and more approachable healthcare system for everyone.</span> </div>
         </div>
-        <div class="col-md-4" style="margin-top:5%" >
-            <div style="height:40vh;width:100%;box-shadow:5px 10px 10px 0px rgba(0,0,0,0.2);border-radius: 10px;border-top: 7px solid rgb(4, 33, 160);"></div>
-        </div>
-        <div class="col-md-4" style="margin-top:5%" >
-            <div style="height:40vh;width:100%;box-shadow:5px 10px 10px 0px rgba(0,0,0,0.2);border-radius: 10px;border-top: 7px solid rgb(137, 160, 4);"></div>
-        </div>
-        <div class="col-md-4" style="margin-top:5%" >
-            <div style="height:40vh;width:100%;box-shadow:5px 10px 10px 0px rgba(0,0,0,0.2);border-radius: 10px;border-top: 7px solid rgb(160, 4, 134);"></div>
-        </div>
-        <div class="col-md-4" style="margin-top:5%" >
-            <div style="height:40vh;width:100%;box-shadow:5px 10px 10px 0px rgba(0,0,0,0.2);border-radius: 10px;border-top: 7px solid rgb(101, 226, 17);"></div>
+        <div class="col-md-4 col-xs-12" style="margin-top:3%">
+            <div
+                style="height:70vh;width:90%;background-image:linear-gradient(to bottom,rgb(241,157,39),rgb(247,221,3));border-radius: 10px;   box-shadow:0px 5px 10px 0px rgba(0,0,0,0.2);display:flex;flex-direction:column;align-items: center;padding:10px">
+                <img style="height:30%;flex:2" src="../../assets/plant.svg" alt="">
+                <span style="color:white;font-size: 1.6rem;font-weight: 600;flex:1;margin-top:5%">Plantation
+                    Drives</span>
+                <span style="color:white;text-align: center;font-family: 'Indie Flower', cursive;flex:3">In lieu with
+                    the Sustainable Development Goals of UNDP; we have taken it upon ourselves to make a greener and
+                    healthy ecosystem around us. Even amidst a pandemic, we made plantation drives a possibility by
+                    coordinating with volunteers all over India to plant 10,000 saplings and seeds. Restoration and
+                    creation of a sustainable abode to undo human negligence is one of the central ideas of
+                    Barkat.</span> </div>
         </div>
     </div>
+</div> -->
+
+<div class="container more-text">
+    <div class="row">
+            <span>Driven by a passion to serve the needy Barkat welfare
+                society aims to alleviate poverty by providing education, healthcare, and community development to the
+                neediest communities across India.</span>
+            <span >Several Activities have been organized by
+                Barkat in order to spread awareness about the socio - economic issues prevailing in the society </span>
+    </div>
+</div>
+
+<div class="container" style="margin-top:5%">
+    <div class="row" style="width:100%">
+        <div class="col-md-4 col-xs-12"  style="margin:auto">
+            <span class="activity-text" >Activities</span>
+        </div>
+    </div>
+    <div class="row" style="width:100%;margin-top:3%">
+        <div class="col-md-8" style="margin:auto">
+            <ol class="gradient-list" style="font-family: 'Indie Flower', cursive;font-size: 1.1rem;">
+                <li>Barkat had conducted a Minimarathon along with the collaboration of 94.3 FM and Amritsar smart city
+                    for *breast cancer awareness.</li>
+                <li>Barkat has raised funds for vertebral surgery of a 14 years old girl in order to save her life and
+                    give her a new life indeed.</li>
+                <li>Barkat has installed reflectors on roads to prevent accidents which has saved many lives .</li>
+                <li>Barkat has conducted Mega tree plantation drives. Blood donation campaigns have also been organized
+                    in order to save many lives and to make a difference .</li>
+                <li>Barkat has distributed clothes and blankets to the needy.</li>
+                <li>The noble deeds of Barkat have been recognized and appreciated by the International Conference and
+                    Human library.</li>
+                <li>Barkat has conducted various seminars in colleges to promote the youth power and instill zeal and
+                    energy in today's youth as they are the future on which our nation rests upon.</li>
+            </ol>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid help-btn-area">
+    <span class="help-btn" routerLink="/founder">Founders</span>
+</div>
+
+<div class="container-fluid call-area">
+    <span class="enrollment-btn" routerLink="/contactus">Interested in Enrollment?</span>
 </div>

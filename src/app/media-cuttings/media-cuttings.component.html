@@ -1,0 +1,15 @@
+<div style="min-height: 100vh;">
+
+    <app-header></app-header>
+
+    <div class="container">
+        <div class="row">
+            <div *ngFor="let e of media" class="col-md-6">
+                <div>
+                    <img src="{{e.image}}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
