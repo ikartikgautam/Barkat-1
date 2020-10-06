@@ -22,7 +22,7 @@ jobs:
         npm ci
         npm run build:prod
     - name: Upload math result for job 1
-        uses: actions/upload-artifact@v2
-        with:
-          name: homework
-          path: dist
+      uses: actions/upload-artifact@v2
+      with:
+        name: homework
+        path: dist
